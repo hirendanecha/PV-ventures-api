@@ -102,9 +102,9 @@ exports.notificationMail = async (userData) => {
 
 exports.channelNotificationEmail = async (userData) => {
   let name = userData?.Username;
-  let msg = `You have been assign in OrganicDating channel by the OrganicDating Admin.
-  To access your channel, log into your OrganicDating account,click on the
-  OrganicDating icon at the top of the page,then click on My Channel.`;
+  let msg = `You have been assign in Pussy Ventures channel by the Pussy Ventures Admin.
+  To access your channel, log into your Pussy Ventures account,click on the
+  Pussy Ventures icon at the top of the page,then click on My Channel.`;
   let redirectUrl = `${environment.FRONTEND_URL}`;
 
   const mailObj = {
@@ -129,9 +129,9 @@ exports.communityApproveEmail = async (profileId, isApprove) => {
       userData[0]?.FirstName + " " + userData[0]?.LastName;
     let msg = "";
     if (isApprove === "Y") {
-      msg = `OrganicDating has approved your Connection application.`;
+      msg = `Pussy Ventures has approved your Connection application.`;
     } else {
-      msg = `OrganicDating has unapproved your Connection application.`;
+      msg = `Pussy Ventures has unapproved your Connection application.`;
     }
     let redirectUrl = `${environment.FRONTEND_URL}`;
     const mailObj = {

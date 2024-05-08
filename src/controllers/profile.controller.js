@@ -93,7 +93,7 @@ exports.updateProfile = async function (req, res) {
         await Profile.images(data);
       }
       profile.updatedDate = moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
-      profile.createdDate = moment(profile.createdDate).format("YYYY-MM-DD HH:mm:ss");
+      profile.createdDate = moment(profile?.createdDate).format("YYYY-MM-DD HH:mm:ss");
       Profile.update(profileId, profile, async function (err, profile) {
         if (err) return utils.send500(res, err);
         return res.json({
